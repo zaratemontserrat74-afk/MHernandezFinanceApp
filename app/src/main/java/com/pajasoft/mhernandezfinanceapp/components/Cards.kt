@@ -27,14 +27,11 @@ import androidx.compose.ui.unit.sp
 import com.pajasoft.mhernandezfinanceapp.models.Cards
 
 
-
-
 @Composable
 fun CardsSection(
     card: List<Cards>,
     modifier: Modifier = Modifier
 ) {
-
     Row(
         modifier = modifier
             .fillMaxWidth()
@@ -42,35 +39,30 @@ fun CardsSection(
             .height(220.dp),
         horizontalArrangement = Arrangement.spacedBy(12.dp)
     ) {
-
         Card1(
             card = card[0],
             modifier = Modifier
                 .weight(1f)
                 .fillMaxHeight()
         )
-
         Column(
             modifier = Modifier
                 .weight(1f)
                 .fillMaxHeight(),
             verticalArrangement = Arrangement.spacedBy(12.dp)
         ) {
-
             Card2(
                 card = card[1],
                 modifier = Modifier
                     .weight(1f)
                     .fillMaxWidth()
             )
-
             Card2(
                 card = card[2],
                 modifier = Modifier
                     .weight(1f)
                     .fillMaxWidth()
             )
-
         }
     }
 }
@@ -96,21 +88,18 @@ fun Card1(
                 horizontalAlignment = Alignment.CenterHorizontally,
                 verticalArrangement = Arrangement.Center
             ) {
-
                 Icon(
                     imageVector = Icons.Default.Face,
                     contentDescription = "Activity Icon",
                     modifier = Modifier.size(36.dp),
                     tint = Color.Black
                 )
-
                 Text(
                     text = card.title,
                     fontSize = 16.sp,
                     fontWeight = FontWeight.Bold,
                     color = Color.Black
                 )
-
                 Text(
                     text = "de la Semana",
                     fontSize = 12.sp,
@@ -144,13 +133,11 @@ fun Card2(
                 horizontalAlignment = Alignment.CenterHorizontally,
                 verticalArrangement = Arrangement.Center
             ) {
-
                 Text(
                     text = card.title,
                     fontSize = 13.sp,
                     color = Color.Gray
                 )
-
                 Text(
                     text = "$${card.amount}",
                     fontSize = 16.sp,
