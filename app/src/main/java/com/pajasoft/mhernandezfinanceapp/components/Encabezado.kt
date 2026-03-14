@@ -89,11 +89,6 @@ fun GreetingPreview() {
             "Montserrat",
             280.99
         )
-
         Encabezado(user)
-
-
-
-
     }
 }
