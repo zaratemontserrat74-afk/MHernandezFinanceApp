@@ -58,7 +58,7 @@ fun Transactionitem(transaction: Transaction) {
                 contentAlignment = Alignment.Center
             ) {
                 Icon(
-                    imageVector = Icons.Default.ShoppingCart,
+                    imageVector = transaction.icon,
                     contentDescription = "icon",
                     tint = BackgroundColor
                 )
@@ -105,7 +105,8 @@ fun PreviewTransacciones(){
         name = "Supermarket",
         category = "Groceries",
         amount = 45.99,
-        time = "11:20 AM"
+        time = "11:20 AM",
+        icon = Icons.Default.ShoppingCart
     )
     MHernandezFinanceAppTheme() {
         Transactionitem(transaction)
