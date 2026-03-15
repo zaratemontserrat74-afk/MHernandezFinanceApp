@@ -28,7 +28,6 @@ import com.pajasoft.mhernandezfinanceapp.ui.theme.MHernandezFinanceAppTheme
 
 @Composable
 fun Transactionitem(transaction: Transaction) {
-
     Row(
         modifier = Modifier
             .fillMaxWidth()
@@ -36,11 +35,9 @@ fun Transactionitem(transaction: Transaction) {
         verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.SpaceBetween
     ) {
-
         Row(
             verticalAlignment = Alignment.CenterVertically
         ) {
-
             Box(
                 modifier = Modifier
                     .size(45.dp)
@@ -54,18 +51,15 @@ fun Transactionitem(transaction: Transaction) {
                     tint = Color.White
                 )
             }
-
             Column(
                 modifier = Modifier
                     .padding(start = 12.dp)
             ) {
-
                 Text(
                     text = transaction.name,
                     fontWeight = FontWeight.Bold,
                     fontSize = 15.sp
                 )
-
                 Text(
                     text = transaction.category,
                     color = Color.Gray,
@@ -75,38 +69,31 @@ fun Transactionitem(transaction: Transaction) {
             }
 
         }
-
         Column(
             horizontalAlignment = Alignment.End
         ) {
-
             Text(
                 text = "$${transaction.amount}",
                 fontWeight = FontWeight.Bold
             )
-
             Text(
                 text = transaction.time,
                 color = Color.Gray,
                 fontSize = 12.sp
             )
-
         }
-
     }
 }
 
 @Preview(showBackground = true)
 @Composable
 fun PreviewTransacciones(){
-
     val transaction = Transaction(
         name = "Supermarket",
         category = "Groceries",
         amount = 45.99,
         time = "11:20 AM"
     )
-
     MHernandezFinanceAppTheme() {
         Transactionitem(transaction)
     }
