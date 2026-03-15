@@ -26,6 +26,13 @@ import com.pajasoft.mhernandezfinanceapp.ui.theme.BackgroundColor
 import com.pajasoft.mhernandezfinanceapp.ui.theme.Beige
 import com.pajasoft.mhernandezfinanceapp.ui.theme.Blue
 import com.pajasoft.mhernandezfinanceapp.ui.theme.Green
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.ShoppingCart
+import androidx.compose.material.icons.filled.LocalGasStation
+import androidx.compose.material.icons.filled.Fastfood
+import androidx.compose.material.icons.filled.Devices
+import androidx.compose.material.icons.filled.MenuBook
+import androidx.compose.material.icons.filled.Restaurant
 
 @Composable
 fun Homescreen(){
@@ -52,67 +59,78 @@ fun Homescreen(){
             name = "Supermarket",
             category = "Groceries",
             amount = 45.99,
-            time = "10:30 AM"
+            time = "10:30 AM",
+            icon = Icons.Default.ShoppingCart
         ),
         Transaction(
             name = "Gas Station",
             category =  "Fuel",
             amount = -30.50,
-            time = "12:15 PM"
+            time = "12:15 PM",
+            icon = Icons.Default.LocalGasStation
         ),
         Transaction(
             name = "Coffee Shop",
             category = "Food and Drinks",
             amount = 5.75,
-            time = "8:00 AM"
+            time = "8:00 AM",
+            icon = Icons.Default.Fastfood
         ),
         Transaction(
             name = "Electronics Store",
             category = "Electronics",
             amount = -120.00,
-            time = "3:45 PM"
+            time = "3:45 PM",
+            icon = Icons.Default.Devices
         ),
         Transaction(
             name = "Bookstore",
             category = "Books",
             amount = 22.50,
-            time = "11:00 AM"
+            time = "11:00 AM",
+            icon = Icons.Default.MenuBook
         ),
         Transaction(
             name = "Restaurant",
             category = "Dining",
             amount = 68.30,
-            time = "7:30 PM"
+            time = "7:30 PM",
+            icon = Icons.Default.Restaurant
         ),
         Transaction(
             name = "Supermarket",
             category = "Groceries",
             amount = 45.99,
-            time = "10:30 AM"
+            time = "10:30 AM",
+            icon = Icons.Default.Restaurant
         ),
         Transaction(
             name = "Gas Station",
             category =  "Fuel",
             amount = -30.50,
-            time = "12:15 PM"
+            time = "12:15 PM",
+            icon = Icons.Default.LocalGasStation
         ),
         Transaction(
             name = "Coffee Shop",
             category = "Food and Drinks",
             amount = 5.75,
-            time = "8:00 AM"
+            time = "8:00 AM",
+            icon = Icons.Default.Fastfood
         ),
         Transaction(
             name = "Electronics Store",
             category = "Electronics",
             amount = -120.00,
-            time = "3:45 PM"
+            time = "3:45 PM",
+            icon = Icons.Default.Devices
         ),
         Transaction(
             name = "Bookstore",
             category = "Books",
             amount = 22.50,
-            time = "11:00 AM"
+            time = "11:00 AM",
+            icon = Icons.Default.MenuBook
         ),
     )
     Column(
