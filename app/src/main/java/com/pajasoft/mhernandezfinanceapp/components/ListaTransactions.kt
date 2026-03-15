@@ -3,7 +3,9 @@ package com.pajasoft.mhernandezfinanceapp.components
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -17,18 +19,31 @@ import com.pajasoft.mhernandezfinanceapp.models.Transaction
 
 @Composable
 fun TransactionsList(transaction: List<Transaction>) {
-    Column(modifier = Modifier.fillMaxWidth()) {
-
+    Column(modifier = Modifier
+        .fillMaxWidth()
+    ) {
         Row(
-            modifier = Modifier.fillMaxWidth().padding(20.dp),
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(20.dp),
             horizontalArrangement = Arrangement.SpaceBetween
         ) {
-            Text(text = "Transactions", fontSize = 20.sp, fontWeight = FontWeight.Bold)
-            Text(text = "See All", color = Color.Gray)
+            Text(
+                text = "Transactions",
+                fontSize = 20.sp,
+                fontWeight = FontWeight.Bold
+            )
+            Text(
+                text = "See All",
+                color = Color.Gray
+            )
         }
-
         transaction.forEach { item ->
             Transactionitem(item)
         }
+        Spacer(
+            modifier = Modifier
+                .height(10.dp)
+        )
     }
 }
