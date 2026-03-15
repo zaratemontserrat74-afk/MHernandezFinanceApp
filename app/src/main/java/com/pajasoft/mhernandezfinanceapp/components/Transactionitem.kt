@@ -9,8 +9,11 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ShoppingCart
+import androidx.compose.material3.Card
+import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -23,11 +26,20 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.pajasoft.mhernandezfinanceapp.models.Transaction
+import com.pajasoft.mhernandezfinanceapp.ui.theme.BackgroundColor
 import com.pajasoft.mhernandezfinanceapp.ui.theme.MHernandezFinanceAppTheme
 
 
 @Composable
 fun Transactionitem(transaction: Transaction) {
+    Card(
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(horizontal = 20.dp, vertical = 6.dp),
+        shape = RoundedCornerShape(16.dp),
+        elevation = CardDefaults.cardElevation(defaultElevation = 2.dp),
+        colors = CardDefaults.cardColors(containerColor = Color.White)
+    ) {
     Row(
         modifier = Modifier
             .fillMaxWidth()
@@ -48,7 +60,7 @@ fun Transactionitem(transaction: Transaction) {
                 Icon(
                     imageVector = Icons.Default.ShoppingCart,
                     contentDescription = "icon",
-                    tint = Color.White
+                    tint = BackgroundColor
                 )
             }
             Column(
@@ -82,6 +94,7 @@ fun Transactionitem(transaction: Transaction) {
                 fontSize = 12.sp
             )
         }
+    }
     }
 }
 
