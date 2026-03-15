@@ -22,6 +22,7 @@ import androidx.compose.ui.unit.sp
 import com.pajasoft.mhernandezfinanceapp.models.Cards
 import com.pajasoft.mhernandezfinanceapp.models.Transaction
 import com.pajasoft.mhernandezfinanceapp.models.User
+import com.pajasoft.mhernandezfinanceapp.ui.theme.BackgroundColor
 import com.pajasoft.mhernandezfinanceapp.ui.theme.Beige
 import com.pajasoft.mhernandezfinanceapp.ui.theme.Blue
 import com.pajasoft.mhernandezfinanceapp.ui.theme.Green
@@ -117,7 +118,7 @@ fun Homescreen(){
     Column(
         modifier = Modifier
             .fillMaxSize()
-            .background(Color.White)
+            .background(BackgroundColor)
     ) {
         Encabezado(user)
         Spacer(
